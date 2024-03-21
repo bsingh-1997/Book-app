@@ -34,7 +34,7 @@ mongoose
     console.log("app connected to db")
 app.listen(PORT,()=>{
     console.log(`app is listened on port : ${PORT}`)
-})
+}) 
 })
 .catch((error)=>{
     console.log(error)
