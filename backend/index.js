@@ -9,18 +9,22 @@ const app = express();
 // middelware for parsing req body
 app.use(express.json()) 
 
+
+app.use(cors());
+app.use(router);
+
 //middelwares for using cors policy
 //opt 1 ,allows all origins with default of cors
 // app.use(cors());
 // opt2 ,allow custom origins
-app.use(
-    cors({
-    origin:['https://book-app-mern.vercel.app/'],
-    methods:['GET','POST','PUT','DELETE'],
-    allowedHeaders:['Content-Type'],
-    credentials: true
-})
-)
+// app.use(
+//     cors({
+//     origin:['https://book-app-mern.vercel.app/'],
+//     methods:['GET','POST','PUT','DELETE'],
+//     allowedHeaders:['Content-Type'],
+//     credentials: true
+// })
+// )
 
 app.get('/',(req,res)=>{
     console.log(req);
