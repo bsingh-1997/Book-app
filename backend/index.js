@@ -44,3 +44,4 @@ app.listen(PORT,()=>{
     console.log(error)
 })
 
+export default app
