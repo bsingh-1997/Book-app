@@ -11,7 +11,6 @@ app.use(express.json())
 
 
 app.use(cors());
-app.use(router);
 
 //middelwares for using cors policy
 //opt 1 ,allows all origins with default of cors
