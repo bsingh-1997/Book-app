@@ -11,15 +11,16 @@ app.use(express.json())
 
 //middelwares for using cors policy
 //opt 1 ,allows all origins with default of cors
-app.use(cors());
+// app.use(cors());
 // opt2 ,allow custom origins
-// app.use(
-//     cors({
-//     origin:'http://localhost:5173/',
-//     methods:['GET','POST','PUT','DELETE'],
-//     allowedHeaders:['Content-Type']
-// })
-// )
+app.use(
+    cors({
+    origin:['https://book-app-api-pi.vercel.app/'],
+    methods:['GET','POST','PUT','DELETE'],
+    allowedHeaders:['Content-Type'],
+    credentials: true
+})
+)
 
 app.get('/',(req,res)=>{
     console.log(req);
