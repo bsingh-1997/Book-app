@@ -15,7 +15,7 @@ app.use(express.json())
 // opt2 ,allow custom origins
 app.use(
     cors({
-    origin:['https://book-app-api-pi.vercel.app/'],
+    origin:['https://book-app-mern.vercel.app/'],
     methods:['GET','POST','PUT','DELETE'],
     allowedHeaders:['Content-Type'],
     credentials: true
