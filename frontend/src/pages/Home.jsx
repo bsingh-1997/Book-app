@@ -15,7 +15,8 @@ const Home = () => {
         setLoading(true)
         axios
         // .get('http://localhost:5555/books')
-        .get('http://192.168.1.14:5555/books')
+        // .get('http://192.168.1.14:5555/books')
+        .get('https://book-app-mern.vercel.app/books')
             .then((res) => {
                 setBooks(res.data.data)
                 setLoading(false)
